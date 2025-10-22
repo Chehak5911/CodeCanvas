@@ -1,0 +1,137 @@
+/* --- General Layout --- */
+.create-project-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s ease-in-out;
+  position: relative;
+  color: #fff;
+}
+
+/* --- Brand Header --- */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 40px;
+  animation: fadeDown 1s ease-in-out;
+}
+
+.brand-logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1890ff;
+  background-color: rgba(24, 144, 255, 0.1);
+  border: 1px solid rgba(24, 144, 255, 0.3);
+  padding: 4px 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: logoPulse 2s infinite ease-in-out;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+/* --- Center Content --- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  animation: fadeUp 1.3s ease-in-out;
+}
+
+/* --- Create Button --- */
+.create-btn {
+  width: 300px;
+  height: 60px;
+  font-size: 1.2rem;
+  border-radius: 12px !important;
+  background-color: #1890ff !important;
+  border: none;
+  box-shadow: 0 0 10px rgba(24, 144, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.create-btn:hover {
+  background-color: #40a9ff !important;
+  box-shadow: 0 0 20px rgba(24, 144, 255, 0.6);
+  transform: scale(1.03);
+}
+
+.create-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- Subtitle --- */
+.subtitle {
+  color: #9ca3af;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+/* --- Version Text --- */
+.version-text {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoPulse {
+  0% {
+    box-shadow: 0 0 4px rgba(24, 144, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(24, 144, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 4px rgba(24, 144, 255, 0.3);
+  }
+}
+
